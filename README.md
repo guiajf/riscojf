@@ -98,19 +98,6 @@ gdf[:5]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -387,6 +374,8 @@ display(m)
 
 ### Exibimos o mapa com as camadas de risco
 
+![](mapa_risco_1.png)
+
 ### Inspecionamos o campo 'Description'
 
 
@@ -458,19 +447,6 @@ gdf[:5]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -682,6 +658,8 @@ display(m)
 # m.save('mapa_risco_com_niveis.html')
 # print("\n💾 Mapa salvo como 'mapa_risco_com_niveis.html'")
 ```
+
+![](mapa_risco_jf.png)
 
 **Considerações finais:**
 
