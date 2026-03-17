@@ -665,6 +665,8 @@ display(m)
 
 Reconstruimos o mapa de risco de Juiz de Fora, a partir do arquivo *.kml*, com o auxílio de diversas bibliotecas do Python, para assegurar controle das características,  visualização por camadas e seleção de texturas.
 
+Veja o mapa interativo em: https://guiajf.github.io/riscojf/.
+
 **Fontes:**
 
 https://www.pjf.mg.gov.br/subsecretarias/sspdc/mapeamento.php
