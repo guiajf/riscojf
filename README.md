@@ -369,10 +369,11 @@ folium.LayerControl(collapse=False).add_to(m)
 
 
 ```python
-display(m)
-```
 
 ### Exibimos o mapa com as camadas de risco
+
+display(m)
+```
 
 ![](mapa_risco_1.png)
 
