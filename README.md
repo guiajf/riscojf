@@ -208,8 +208,9 @@ else:
 
 ```python
 def initMap():
-    tiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    tiles = 'OpenStreetMap'
+    attr = 'OSM'
+    name='OpenStreetMap'
 
     map = folium.Map(location=[center_lat, center_lon],
                 zoom_start = 10,
@@ -576,10 +577,19 @@ cores_risco = {
 # Primeiro, manter as camadas originais por tipo de risco
 for camada in gdf['camada_origem'].unique():
     dados_camada = gdf[gdf['camada_origem'] == camada]
+    
+    # Extrair o tipo de risco usando regex
+    if 'Hidrológico' in camada:
+        nome_curto = 'Risco Hidrológico'
+    elif 'Geológico' in camada:
+        nome_curto = 'Risco Geológico'
+    else:
+        nome_curto = camada  # fallback para outros casos
+    
     # Adicionar cor no nome da camada usando HTML
     cor = cores_risco.get(camada, 'green')
-    nome_camada = f'<span style="color:{cor}; font-weight:bold;">⬤ {camada}</span>'
-    grupo = folium.FeatureGroup(name=nome_camada, show=False)  # Começar oculto
+    nome_camada = f'<span style="color:{cor}; font-weight:bold;">⬤ {nome_curto}</span>'
+    grupo = folium.FeatureGroup(name=nome_camada, show=False)
     
     for idx, row in dados_camada.iterrows():
         if row.geometry.geom_type in ['Polygon', 'MultiPolygon']:
@@ -595,13 +605,12 @@ for camada in gdf['camada_origem'].unique():
             ).add_to(grupo)
     grupo.add_to(m)
 
-
 # Criar FeatureGroups para cada nível de risco com cores nos nomes
 grupos_risco = {}
 for nivel in ['R1', 'R2', 'R3', 'R4', 'Não classificado']:
     cor = cores_risco.get(nivel, '#A9A9A9')
     # Adicionar cor no nome do nível de risco usando HTML
-    nome_nivel = f'<span style="color:{cor}; font-weight:bold;">⬤ Risco {nivel}</span>'
+    nome_nivel = f'<span style="color:{cor}; font-weight:bold;">⬤ {nivel}</span>'
     grupos_risco[nivel] = folium.FeatureGroup(name=nome_nivel, show=True)
 
 # Adicionar feições aos grupos correspondentes
@@ -656,8 +665,8 @@ folium.LayerControl(collapsed=False, position='topright').add_to(m)
 display(m)
 
 # Salvar mapa (opcional)
-# m.save('mapa_risco_com_niveis.html')
-# print("\n Mapa salvo como 'mapa_risco_com_niveis.html'")
+# m.save('mapa_risco_com_jf.html')
+# print("\n💾 Mapa salvo como 'mapa_risco_jf.html'")
 ```
 
 ![](mapa_risco_jf.png)
