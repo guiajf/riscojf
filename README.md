@@ -657,7 +657,7 @@ display(m)
 
 # Salvar mapa (opcional)
 # m.save('mapa_risco_com_niveis.html')
-# print("\n💾 Mapa salvo como 'mapa_risco_com_niveis.html'")
+# print("\n Mapa salvo como 'mapa_risco_com_niveis.html'")
 ```
 
 ![](mapa_risco_jf.png)
