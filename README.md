@@ -663,7 +663,7 @@ display(m)
 
 # Salvar mapa (opcional)
 # m.save('mapa_risco_com_jf.html')
-# print("\n💾 Mapa salvo como 'mapa_risco_jf.html'")
+# print("\n Mapa salvo como 'mapa_risco_jf.html'")
 ```
 
 ![](mapa_risco_jf.png)
