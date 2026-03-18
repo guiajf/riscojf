@@ -367,11 +367,9 @@ folium.LayerControl(collapse=False).add_to(m)
 
 
 
-
-```python
-
 ### Exibimos o mapa com as camadas de risco
 
+```python
 display(m)
 ```
 
