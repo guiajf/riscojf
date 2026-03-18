@@ -5,7 +5,6 @@
 As áreas de risco do município são monitoradas pela **Defesa Civil**. O mapa de risco criado pela *Subsecretaria de Proteção e Defesa Civil*, usando o *Google My Maps*, que orienta o planejamento de ações preventivas e respostas a desastres, está disponível em https://www.pjf.mg.gov.br/subsecretarias/sspdc/mapeamento.php.
 
 Os riscos se enquadram em duas categorias: hidrológico (inundações) e geológico (deslizamentos).<br>
-Os dados foram atualizados em janeiro 2026, portanto, antes da tragédia que abalou a cidade.
 
 A **Defesa Civil** classifica o risco em uma escala que vai de **R1** (risco muito baixo) a **R4** (risco muito alto).
 
