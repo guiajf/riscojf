@@ -640,7 +640,6 @@ for idx, row in gdf.iterrows():
                 'fillOpacity': 0.7 if nivel != 'Não classificado' else 0.3
             },
             tooltip=folium.Tooltip(tooltip_text),
-            popup=folium.Popup(f"Risco: {nivel}")
         ).add_to(grupo)
 
 # Adicionar todos os grupos ao mapa
